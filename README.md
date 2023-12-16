@@ -1,1 +1,1 @@
-This mod adds a stamina bar to icarus wings.
+This mod adds a stamina bar to icarus wings. Currently non-functional, I'm not sure how to check if the player is wearing icarus wings.

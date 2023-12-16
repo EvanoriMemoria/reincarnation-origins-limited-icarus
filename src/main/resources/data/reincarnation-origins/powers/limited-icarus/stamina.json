@@ -1,17 +1,21 @@
 {
   "type": "origins:multiple",
-  "lose_stamina": {
+  "exhaust": {
     "type": "origins:action_over_time",
     "interval": 20,
     "entity_action": {
       "type": "origins:exhaust",
-      "amount": 0.5
+      "amount": 0.4
     },
     "condition": {
       "type": "origins:and",
       "conditions": [
         {
           "type": "origins:fall_flying"
+        },
+        {
+          "type": "origins:nbt",
+          "nbt": ""
         }
       ]
     }
@@ -39,10 +43,19 @@
       "should_render": true,
       "bar_index": 2,
       "condition": {
-        "type": "origins:resource",
-        "resource": "reincarnation-origins:limited-icarus/no_fly_cooldown",
-        "comparison": "==",
-        "compare_to": 0
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:nbt",
+            "nbt": ""
+          },
+          {
+            "type": "origins:resource",
+            "resource": "reincarnation-origins:limited-icarus/no_fly_cooldown",
+            "comparison": "==",
+            "compare_to": 0
+          }
+        ]
       }
     }
   },
@@ -66,6 +79,38 @@
         "operation": "add",
         "change": 5
       }
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_has_wings",
+      "comparison": ">=",
+      "compare_to": 1
     }
+  },
+  "wing_checker": {
+    "type": "origins:action_over_time",
+    "interval": 10,
+    "entity_action": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "origins:nbt",
+        "nbt": ""
+      },
+      "if_action": {
+        "type": "origins:change_resource",
+        "resource": "*:*_has_wings",
+        "change": 1
+      },
+      "else_action": {
+        "type": "origins:change_resource",
+        "resource": "*:*_has_wings",
+        "change": -1
+      }
+    }
+  },
+  "has_wings": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 1
   }
 }
