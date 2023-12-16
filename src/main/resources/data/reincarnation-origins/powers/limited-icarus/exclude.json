@@ -1,0 +1,76 @@
+{
+  "type": "origins:action_on_callback",
+  "execute_chosen_when_orb": true,
+  "entity_action_chosen": {
+    "type": "origins:if_else",
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:dragonkin"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:blue-dragon"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:brown-dragon"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:red-dragon"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:white-dragon"
+        }
+      ]
+    },
+    "if_action": {
+      "type": "execute_command",
+      "command": "function reincarnation-origins:limited-icarus:remove_powers"
+    },
+    "else_action": {
+      "type": "execute_command",
+      "command": "function reincarnation-origins:limited-icarus:grant_powers"
+    }
+  },
+  "entity_action_added": {
+    "type": "origins:if_else",
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:dragonkin"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:blue-dragon"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:brown-dragon"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:red-dragon"
+        },
+        {
+          "type": "origins:origin",
+          "origin": "reincarnation-origins:white-dragon"
+        }
+      ]
+    },
+    "if_action": {
+      "type": "execute_command",
+      "command": "function reincarnation-origins:limited-icarus:remove_powers"
+    },
+    "else_action": {
+      "type": "execute_command",
+      "command": "function reincarnation-origins:limited-icarus:grant_powers"
+    }
+  }
+}

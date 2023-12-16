@@ -1,0 +1,8 @@
+{
+  "order": 999,
+  "origins": [
+    "reincarnation-origins:limited-icarus"
+  ],
+  "auto_choose": true,
+  "hidden": true
+}

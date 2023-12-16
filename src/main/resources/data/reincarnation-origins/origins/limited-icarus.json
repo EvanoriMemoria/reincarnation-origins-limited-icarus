@@ -1,0 +1,11 @@
+{
+	"powers": [
+		"reincarnation-origins:limited-icarus/exclude",
+		"reincarnation-origins:limited-icarus/stamina",
+		"reincarnation-origins:limited-icarus/stop_fly"
+	],
+	"icon": "minecraft:barrier",
+	"order": -10,
+	"impact": 0,
+	"description": "you shouldn't see this in game, it puts some limits on icarus flight with a stamina bar"
+}
